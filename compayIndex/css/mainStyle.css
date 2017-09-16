@@ -1,0 +1,88 @@
+@charset "utf-8";
+body{border:white solid 1px;}
+body,.cpy-index .search,.cpy-index article hgroup,.cpy-index .news{ position: relative;}
+body,.cpy-index header,.head-v3,.head-v3 .navigation-inner,.cpy-index article,.cpy-index footer{width: 1220px; margin: 0 auto;}
+.cpy-index .search>img,.cpy-index article hgroup>img{position: absolute; }
+
+.cpy-index header{margin:20px auto 40px;}
+#logo>a img{ max-width:145px; max-height: 100px; }
+
+.cpy-index header>div:nth-child(3),.cpy-index header>div:last-child>figure:nth-child(2){float:right;}
+.cpy-index header>div:first-child,.cpy-index header>div:nth-child(2),.cpy-index header>div:last-child>figure:first-child,.cpy-index header>div:last-child>figure img{ float:left;}
+
+.cpy-index .search>input{ width:450px; border: none; color:rgb(149,149,149); padding: 9px 0 9px 45px; border-radius:40px; border: rgb(30,163,127) solid 2px;}
+.cpy-index .search>img{ left: 15px; top:10px; max-width: 24px; max-height: 24px;}
+
+.cpy-index header>div:last-child>figure img{ max-width: 42px; max-height: 42px; margin-right:15px;}
+.cpy-index header>div:last-child figcaption{ float: right;}
+.cpy-index header>div:last-child figcaption h5,.cpy-index header>div:last-child figcaption h6{ white-space: nowrap; word-break: keep-all;}
+.cpy-index header>div:last-child figcaption h5{ color:rgb(30,163,127); font-size: 16px;}
+.cpy-index header>div:last-child>figure:first-child{ margin-right: 40px;}
+.cpy-index header>div:nth-child(2),.cpy-index header>div:nth-child(3){ margin-top: 34px;}
+.cpy-index header>div:nth-child(2){ margin-left: 60px;}
+
+
+
+
+/*nav*/
+.cpy-index .big-pic,.cpy-index .news>aside ul li{ text-align: center;}
+
+.cpy-index .big-pic img:last-child{ width:60%;}
+.cpy-index .big-pic img:first-child{ margin:80px 0; width:37%;}
+
+.cpy-index article>section,.cpy-index article>div:last-child,.cpy-index .news{margin: 0 auto;}
+.cpy-index article>section{ margin:-20px auto 0; width:960px;  background:rgb(49,57,68);font-size: 18px; padding:30px; color: rgb(255,255,255);}
+
+
+.cpy-index article hgroup>img{width: 45px; top: 0; left: 0;}
+.cpy-index article hgroup>h1{ text-indent:50px; font-size: 20px; padding-top: 8px;}
+.cpy-index article>section p{ text-align: center; word-spacing: 2px; letter-spacing: 3px;
+border:3px solid #000;  
+border-image-source:url(../img/dotted_line.png);  
+border-image-slice:7 7 7 7;padding:35px 0; margin-top: 20px;
+}
+
+.cpy-index article>div:last-child{ margin-top:110px;}
+.cpy-index article>div:last-child,.cpy-index .news{ width:1020px;}
+.cpy-index article>div:last-child section{ width: 25%; float: left; text-align: center;}
+.cpy-index article>div:last-child section img{ max-width: 124px;}
+.cpy-index article>div:last-child section>h1{ font-size:18px; margin: 20px 0 5px;}
+.cpy-index article>div:last-child section>span{color:grey; font-size: 17px; padding: 0 15px;}
+
+.cpy-index .news{ margin-top:200px; margin-bottom:60px;}
+.cpy-index .news>div{ float:left; position: relative; }
+.cpy-index .news>div img:first-child{ max-width: 190px; margin-left:100px;}
+.cpy-index .news>div img:last-child{ max-width: 250px; position: absolute; right:-240px; top: -100px;}
+.cpy-index .news>aside{ float: right;background:rgb(30,163,127); color: white; letter-spacing: 2px;height: 236px; width:500px;overflow: hidden; }
+.cpy-index .news>aside h2{ font-size: 18px; padding-top:15px;}
+.cpy-index .news>aside>div{padding-left: 40px;}
+.cpy-index .news>aside>div>img{ float: left; max-width:48px; margin-right: 10px; }
+.cpy-index .news>aside ul{ clear: both; margin-top:20px;}
+.cpy-index .news>aside ul li{ line-height: 2.7em;  width: 80%; margin: 0 auto; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+
+
+
+.cpy-index footer{ background: url(../img/btn_bg.png) repeat-x; margin:80px auto 0; height: 165px; padding:60px 0 0  !important;}
+.cpy-index footer p,.cpy-index footer a{ color: white; text-decoration: none;text-align: center; margin: auto; }
+.cpy-index footer p a{  margin: 0 20px;}
+.cpy-index footer p{ margin:20px auto;}
+
+
+
+/*cpy-subOne*/
+.cpy-subOne a{ color: initial;}
+
+.cpy-subOne article>summary em,.cpy-subOne article>summary>span{ color:rgb(30,163,127);}
+.cpy-subOne article>summary{ margin-top: 10px;}
+.cpy-subOne article{ font-size: 1.1em;}
+.cpy-subOne article>summary em:nth-child(2),.cpy-subOne article>summary>span+em{  font-size:32px; vertical-align:-5px;}
+
+.cpy-subOne article>summary a,.cpy-subOne article>aside div p{ color: rgb(115,116,116); }
+.cpy-subOne article>summary a>span,.cpy-subOne article>aside>p{ color: rgb(175,175,175);}
+.cpy-subOne article>aside{  margin: 40px auto 0; }
+.cpy-subOne article>aside h1{ text-align: center; font:30px/1.4em "微软雅黑";}
+.cpy-subOne article>aside>p{ padding: 20px 0 10px; border-bottom:gainsboro solid 1px;}
+.cpy-subOne article>aside>p span:last-child{ float:right; }
+.cpy-subOne article>aside div{ margin:40px auto;width: 960px;}
+.cpy-subOne article>aside div>img{ width: 100%; max-height: 400px; margin: 20px 0;}
+.cpy-subOne article>aside div p{ letter-spacing: 2px; text-indent:25px; font:18px/2.2em "微软雅黑";}

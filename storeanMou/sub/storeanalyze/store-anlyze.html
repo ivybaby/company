@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>店铺基础指标分析</title>
+		<meta name="description" content="">
+        <meta name="keyword" content="">
+       
+		<link href="../../css/reset.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link href="../../css/style.css" rel="stylesheet">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../css/dataTables.bootstrap.css">
+	    <script src="../../js/jQuery-2.1.4.min.js"></script>
+	    <script type="text/javascript" src="../../js/echarts-all.js"></script>
+		
+		<!--[if lt IE 9]>
+        <script src="../ie8/html5shiv.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+	
+	  <div id="">
+	  	<!-- topbar start-->
+	  	<div class="topbar">	
+	  	</div>
+	  	<!-- topbar end-->
+	  	
+	  	<!-- nav start-->
+	  	<div class="nav cl">
+	  		<hgroup>
+	  		    <img src="../../img/logo.png" alt="" class="logo" />
+	  		    <div class="topbar-range cl pull-right">
+	  			    <a href="#" id="" class="">登录</a><a href="#" class="bg-red">注册</a>
+	  			    <div>
+	  				 <!--<input type="text" value="搜索你想了解的" maxlength="20" class="topbar_search_ipt" />
+	  				  <img src="img/search_normal.png" class="cursor" />--> 
+	  		        </div>
+	  		    </div>
+	  		    
+	  		    
+	  	        <nav>	
+	  	    	   <ul class="nav-ul cl text-center">
+	  	        		<!--<li><a href="index.html">首页</a></li>-->
+	  	        		<li><a href="#">店铺分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="store-anlyze.html">基础指标分析</a></li>
+	  	        				<li><a href="#">宝贝数量下标</a></li>
+	  	        				<li><a href="#">宝贝下架时间分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">宝贝分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="#">宝贝基础指标分析</a></li>
+	  	        				<li><a href="#">宝贝评价分析</a></li>
+	  	        				<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">关键词分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="../keywordanalyze/drop-down-word.html">下拉框取词</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-anlyze.html">标题分词工具</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-combine-anlyze.html">关键词组合工具</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">排名分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="">淘宝搜索排名分析</a></li>
+	  	        				<li><a href="">天猫搜索排名分析</a></li>
+	  	        				<li><a href="../rankanlyze/app-anlyze.html">手机淘宝APP搜索排名</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">支持</a></li>
+	  	        	</ul>
+	  	        </nav>
+	  	        
+	        </hgroup>
+	        
+	  	</div>
+	  	<!-- nav end-->
+	  	
+	    
+	    <!--  start -->
+	    <div class="sub-content">
+	    	<div class="data-table">
+	    	   <h3 class="font-16"><a href="#" class="text-red">店铺参谋[dianpucanmou.com]</a><em>>></em><span>店铺基础指标分析</span></h3>
+	    	   <div class="data-head cl">
+	    	   	    <div class="col-4"></div>
+	    	   	    <div class="col-5">
+	    	   	    	 <label class="font-16 label pull-left">淘宝店铺掌柜旺旺：</label>
+	    	   	         <input type="text" value="天使之城" class="input pull-left" />
+	    	   	         <input type="button" value="查询" class="btn pull-left" style="margin:0 10px;" />
+	    	   	    </div>
+	    	   	   
+	    	   </div>
+	    	   <div class="data-body cl">	
+	    	   	        <!-- row start -->
+    		            <div class="row">
+	    	   	    	         	<table class="table table-bordered text-center">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th colspan="7">淘宝店铺<em class="text-primary font-16">&nbsp;樱梦品牌睡衣店&nbsp;</em>店铺基本信息</th>
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td rowspan="4"><img src="../../img/code_now.png" class="search-store-img" ></td>
+	    	   	    	         				<td>淘宝店铺</td>
+	    	   	    	         				<td>樱梦品牌睡衣店 |&nbsp;<a href="#">进入店铺</a>&nbsp;</td>
+	    	   	    	         				<td>掌柜旺旺</td>
+	    	   	    	         				<td>天使之城</td>
+	    	   	    	         				<td>所在地区</td>
+	    	   	    	         				<td>上海</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>卖家信用</td>
+	    	   	    	         				<td><img src="../../img/king.png" class="grade-degree"></td>
+	    	   	    	         				<td>店铺收藏数</td>
+	    	   	    	         				<td>508</td>
+	    	   	    	         				<td>店铺宝贝数</td>
+	    	   	    	         				<td>共<em class="text-red">5</em>件宝贝</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>店铺类型</td>
+	    	   	    	         				<td>淘宝店铺</td>
+	    	   	    	         				<td>店铺好评率</td>
+	    	   	    	         				<td>100.00%</td>
+	    	   	    	         				<td>客服电话</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>经营资质</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>主营类目</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>创店时间</td>
+	    	   	    	         				<td>2012-01-21 21:14:36</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td colspan="7" class="font-16">亲，您查询的是 天使之城 卖家的店铺经营分析，您也可以查看这店铺的 <a href="#" class="text-primary">全店宝贝数据</a> | <a href="#" class="text-primary">新品上架</a> | <a href="#" class="text-primary">隐形降权查询</a> | <a href="#" class="text-primary">相似店铺</a> | <a href="#" class="text-primary">店铺引流词</a></td>
+	    	   	    	         			</tr>
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	     </div>
+	    	   	     <!-- row end -->
+	    	   	     <!-- row start -->
+	    	   	     <div class="row">
+	    	   	    	         	<table class="table table-bordered text-center">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th colspan="8">淘宝店铺<em class="text-primary font-16">&nbsp;樱梦品牌睡衣店&nbsp;</em>店铺健康指数</th>
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>平均退款速度</td>
+	    	   	    	         				<td>2.00天</td>
+	    	   	    	         				<td>近30天退款率 </td>
+	    	   	    	         				<td>100.00%</td>
+	    	   	    	         				<td>近30天投诉率</td>
+	    	   	    	         				<td>0%</td>
+	    	   	    	         				<td>近30天处罚数</td>
+	    	   	    	         				<td>0%</td>
+	    	   	    	         		   </tr>
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	    </div>
+	    	   	    <!-- row end -->
+	    	   	    
+	    	   	    <div class="row">
+	    	   	    	<div class="cl btn-download">
+	    	   	    		<input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	</div>
+	    	   	    	<table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                    	<th colspan="9">天猫商城淘宝店铺<em class="text-primary font-16">&nbsp;樱梦品牌睡衣店&nbsp;</em>店铺的热销宝贝</th>
+                      </tr>
+                      <tr>
+                        <th>序号</th>
+                        <th>主图</th>
+                        <th>宝贝名称</th>
+                        <th>原价</th>
+                        <th>销售价格</th> 
+                        <th>月销量</th>
+                        <th>库存</th>
+                        <th>收藏</th>
+                        <th>分析</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_1.png" alt=""  />
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/code_now.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>电脑</td>
+                        <td></td>
+                        <td>283.00</td>
+                        <td>83</td>
+                        <td>83</td>
+                        <td>29383</td>
+                        <td></td>
+                        
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_1.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_3.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        
+                      </tr>
+                     
+                     </tbody>
+                     <tfoot>
+                     	<tr><td colspan="9">点击查看<em class="text-primary font-16">&nbsp;全店宝贝销量数据&nbsp;</em></td></tr>
+                     </tfoot>
+                   
+                  </table>
+	    	   
+	    	   	    </div>
+	    	   	   
+	    	   	   <!-- tab start -->
+	    	   	     <div>
+	    	   	    	<div id="controlTab">
+    			           <a href="#item1" class="tab-item tab-item-active">经营分析</a>
+    			           <a href="#item2" class="tab-item">下架分析</a>
+    			           <a href="#item3" class="tab-item">类目分析</a>
+    			           <a href="#item4" class="tab-item">品牌分析</a>
+    		            </div>
+    		            <div>
+    		            	 <div id="item1" class="tab-content" style="padding-top: 10px;">
+    		            	 	
+	    	   	    	        <div class="cl btn-download">
+	    	   	    		        <input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	        </div>
+	    	   	    	        <table class="table table-bordered text-center">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th colspan="6">淘宝店铺<em class="text-primary font-16">&nbsp;樱梦品牌睡衣店&nbsp;</em>店铺经营分析</th>
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>近30天销售额</td>
+	    	   	    	         				<td>0.00元</td>
+	    	   	    	         				<td>近30天销量</td>
+	    	   	    	         				<td>0件</td>
+	    	   	    	         				<td>平均成交价</td>
+	    	   	    	         				<td>0元</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>平均日销售额</td>
+	    	   	    	         				<td>0.00元</td>
+	    	   	    	         				<td>平均日销量</td>
+	    	   	    	         				<td>0件</td>
+	    	   	    	         				<td>近30天滞销宝贝</td>
+	    	   	    	         				<td>5件<a href="#" class="text-red">查看滞销宝贝</a></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>经营数据</td>
+	    	   	    	         				<td colspan="3">价格为元宝贝销量占比，0销量宝贝5件占比100.00%，月销30件以下低销量宝贝0件占比0.00%，月销上千宝贝0件占比0.00%</td>
+	    	   	    	         				<td>店铺动销率</td>
+	    	   	    	         				<td >0.00%</td>
+	    	   	    	         				
+	    	   	    	         		    </tr>
+	    	   	    	   
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	    	         	<div class="row range-price">
+	    	   	    	         		<div class="col-1 text-right">自定义范围</div>
+	    	   	    	         		<div class="col-4">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         		</div>
+	    	   	    	         		<div class="col-1 text-right">销量</div>
+	    	   	    	         		<div class="col-4">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         			<input type="text" value="0.0" class="input pull-left">
+	    	   	    	         		</div>
+	    	   	    	         		<div class="col-2"><input type="button" value="重新计算" class="btn pull-left font-14"  /><input type="button" value="返回" class="btn pull-right font-14" style="margin:0 10px;" /></div>
+	    	   	    	         		
+	    	   	    	         	</div>
+	    	   	    	         	 <table class="table table-bordered text-center">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th>价格范围（元）</th>
+	    	   	    	         				<th>商品数量</th>
+	    	   	    	         				<th>占数量比例</th>
+	    	   	    	         				<th>近30天销量（件）</th>
+	    	   	    	         				<th>占销量比例</th>
+	    	   	    	         				<th>近30天销售额</th>
+	    	   	    	         				<th>占金额比例</th>
+	    	   	    	         				<th>查看详细</th>
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>20-45</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>46-70</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>71-100</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	   
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	    	         	<div class="chart" id="pieChart" style="height: 400px;"></div>
+	    	   	    	         	<div class="chart" id="pieChartSales" style="height: 400px;"></div>
+	    	   	    	         	<table class="table table-bordered text-center">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th>销量范围（件）</th>
+	    	   	    	         				<th>商品数量</th>
+	    	   	    	         				<th>占数量比例</th>
+	    	   	    	         				<th>近30天销量（件）</th>
+	    	   	    	         				<th>占销量比例</th>
+	    	   	    	         				<th>近30天销售额</th>
+	    	   	    	         				<th>占金额比例</th>
+	    	   	    	         				<th>查看详细</th>
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>1-29</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>30-199</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>200-499</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>500-999</td>
+	    	   	    	         				<td>3</td>
+	    	   	    	         				<td>20%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>40%</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td>0</td>
+	    	   	    	         				<td></td>
+	    	   	    	         		    </tr>
+	    	   	    	   
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	    	 	 </div>
+    		            	 <div id="item2" class="tab-content" style="padding-top: 10px;width: 100%;">
+    		            	 	
+    		            	 	 <div class="cl btn-download">
+	    	   	    		        <input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	         </div>
+	    	   	    	         
+			                     <div class="row">
+			                     	 <div class="chart" id="lineChart" style="height: 400px;"></div>
+			                     </div>
+    		            	 </div>
+    		            	 <div id="item3" class="tab-content" style="padding-top: 10px;">
+    		            	 </div>
+    		            </div>
+	    	   	    </div>
+	    	   	    <!-- tab end -->
+	    	   	    
+	    	   	     
+	    	   	    <div class="row" style="margin-top: 40px;">
+	    	   	    	<h5>店铺基本指标分析的数据说明及使用帮助</h5>
+	    	   	    	<ul style="list-style: decimal inside;" class="font-14 text-gray list-introduce">
+	    	   	    		<li>店铺基本指标分析提供竞争对手数据查询功能，是店铺运营X光机，快速了解竞争店铺的基本信息、销售品类、运营情况等情报，提供成交量、销售额等实时销售数据和经营数据</li>
+	    	   	    		<li>本功能店铺基本信息是免费版功能，经营分析是收费功能，详情查看套餐介绍和功能说明，或网店购买，也可 点击体验账号 来使用全部功能（体验账号只能查指定的一个店铺和宝贝）</li>
+	    	   	    		<li>点击查看本功能的数据说明和使用帮助，淘宝运营技巧的免费视频教程和免费文章教程，参加每周四晚上8点的YY课程和加入看店宝的QQ群和更多用户进行交流，点击加入</li>
+	    	   	    		<li>工具在不断的补充和完善中，如果您有好的工具或者意见与建议报告请联系客服告知我们，淘宝不断变化，如果发现功能不能使用或者数据异常也尽快联系客服修复，谢谢！</li>
+	    	   	    	</ul>
+	    	   	    </div>
+			                   
+	    	   </div>  
+	        </div>
+      <!--  end -->
+	  </div>
+	  
+	  <footer class="row">
+	  	 <div class="row footer-center">
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol class="">
+	  	        	<li><a href="#">基础指标分析</a></li>
+	  	        	<li><a href="#">宝贝数量下标</a></li>
+	  	        	<li><a href="#">宝贝下架时间分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>宝贝分析</h4>
+	  	 		<ol>
+	  	            <li><a href="pages/cashierSystem.html">宝贝基础指标分析</a></li>
+	  	        	<li><a href="pages/clientRelation.html">宝贝评价分析</a></li>
+	  	        	<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">下拉框取词</a></li>
+	  	       		<li><a href="pages/clientRelation.html">标题分词工具</a></li>
+	   				<li><a href="#">关键词组合工具</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>排名分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">淘宝排名分析</a></li>
+	  	  			<li><a href="pages/clientRelation.html">天猫排名分析</a></li>
+      				<li><a href="#">手机淘宝APP排名查询</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 </div>
+	  </footer>
+	</div>
+	</body>
+	<script src="../../js/getHover.js"></script>
+
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../js/jquery.dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.min.js"></script>
+    
+	<script>
+		$(function(){
+			  $("#pieChart,#pieChartSales").css({"width":$("#pieChart").closest("div").outerWidth()+'px'});
+			  var obg,ocolor;
+			  $(".nav-ol>li").hover(function(){
+			  	  if($(this).children("a[href$='.html']").length>0){
+			  	  	 obg=$(this).css("background");
+                     ocolor=$(this).children("a").css("color");
+			  	     $(this).children("a").css({"color":"#fff"});
+			  	     $(this).css({"background":"#1fa87a"});
+			  	  }
+			  	 
+			  },function(){
+			  	if($(this).children("a[href$='.html']").length>0){
+			  	   $(this).css({"background":obg});
+			  	   $(this).children("a").css({"color":"#000"});
+			  	}
+			  });
+              
+              $(".nav-ul").navSlideDown();//nav的slidedown下拉
+              
+              /*tab*/
+             var tabItem=".tab-item";
+			 var tabContent=".tab-content";
+		     $(tabContent).hide();
+		     $(tabItem).each(function(){
+			     if($(this).hasClass("tab-item-active")){
+				    var $itemHref=$(this).attr("href");
+				    $($itemHref).show();
+				    return;
+			     }
+		     });
+		     $(tabItem).on("click",function(e){
+			    e.preventDefault();
+			    if($(this).hasClass("tab-item-active")){
+				    return;
+			    }
+			    else{
+				   $(tabItem).removeClass("tab-item-active");
+			       $(this).addClass("tab-item-active");
+			       $(tabContent).hide();
+			       $($(this).attr("href")).show();
+			   }
+			
+		    });
+			
+             
+              $('#example2,#example3').DataTable({
+                 "paging": true,
+                 "lengthChange": false,
+                 "searching": false,
+                 "ordering": true,
+                 "info": true,
+                 "autoWidth": false
+              });
+              
+              /**/
+             $("td").each(function(){
+             	if($(this).children(".show-img").length>0){
+             		var $obj=$(this).children(".show-img");
+             		var oheight=$(this).outerWidth()-8;
+             		$(this).hover(function(){
+             			$obj.append("<div class='big-img'><img src='"+$obj.children(".main-img").attr("src")+"' /></div>").end().find(".big-img").css({"left":oheight+'px'});
+             			
+             		},function(){
+             			$(this).find(".big-img").remove();
+             		})
+             	}
+             });
+             
+             
+             
+             window.onresize=window.onload=function(){
+        	   
+        	   
+			var option = {
+    title : {
+        text: '各种价格范围宝贝的数量比例',
+        subtext: '',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['直接访问','邮件营销','联盟广告']
+    },
+   
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'}
+               
+            ]
+        }
+    ]
+};         var opt1 = {
+    title : {
+        text: '各种价格范围宝贝的销量比例',
+        subtext: '',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['20-45','46-70','71-100']
+    },
+   
+    calculable : true,
+    series : [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:185, name:'20-45'},
+                {value:30, name:'46-70'},
+                {value:234, name:'71-100'}
+               
+            ]
+        }
+    ]
+};
+                    
+                    
+             
+             
+            var byId = function(id) {
+				return document.getElementById(id);
+			  };
+			var pieChart = echarts.init(byId('pieChart'));
+			pieChart.setOption(option);
+			
+			var pieChartSales = echarts.init(byId('pieChartSales'));
+			pieChartSales.setOption(opt1);
+			
+			
+            }
+	   
+        });
+    
+    
+    
+</script>
+	
+</html>
+

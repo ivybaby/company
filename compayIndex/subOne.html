@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="cpy-index cpy-subOne">
+	<head>
+		<meta charset="utf-8" />
+		<title>内容</title>
+		<link href="css/style.css" type="text/css" rel="stylesheet">
+		<link media="screen" rel="stylesheet" href="css/demo.css"/>
+		<link href="css/mainStyle.css" type="text/css" rel="stylesheet">
+		<link href="css/movestyle.css" type="text/css" rel="stylesheet">
+
+        <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="js/jQuery-jcMarquee.js" type="text/javascript"></script>
+	
+		<script type="text/javascript">
+        jQuery(document).ready(function(){
+        	 
+	        var qcloud={};
+	        $('[_t_nav]').hover(function(){
+		        var _nav = $(this).attr('_t_nav');
+		        clearTimeout( qcloud[ _nav + '_timer' ] );
+		        qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		        $('[_t_nav]').each(function(){
+		        $(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+		
+		        });
+		      $('#'+_nav).stop(true,true).slideDown(200);
+		
+		      }, 150);
+	
+	        },function(){
+		        
+		        var _nav = $(this).attr('_t_nav');
+		        clearTimeout( qcloud[ _nav + '_timer' ] );
+		        qcloud[ _nav + '_timer' ] = setTimeout(function(){
+		        $('[_t_nav]').removeClass('nav-up-selected');
+		        $('#'+_nav).stop(true,true).slideUp(200);
+		    
+		        }, 150);
+	
+	        });
+	
+	       $('#Marquee_x').jcMarquee({ 'marquee':'x','margin_right':'10px','speed':30 });
+	       
+	       //nav固定
+	      
+	      
+
+
+       var timer=null;
+       var now=1;
+       function toMove()
+       { 
+           var oScrollImg=document.getElementById("scrollImg"); 
+	       var oBigImg=document.getElementById("bigImg");
+	       var oSmallImg=document.getElementById("smallImg");
+	       var oBigLi=oBigImg.getElementsByTagName("li");
+	       var oSmallLi=oSmallImg.getElementsByTagName("li");
+	       for(var i=1;i<=oSmallLi.length;i++)
+	       {
+		       oSmallLi[i-1].className='';	
+	        }
+	
+	       oBigImg.style.height=oBigLi.length*oBigLi[0].offsetHeight+'px';
+	       startMove(oBigImg,{top:-now*oBigLi[0].offsetHeight});
+	
+	
+	       oSmallLi[now].className='add';
+	       if(now==oBigLi.length-1)
+	       {
+		         now=-1;
+	        }
+	        now++;
+	
+        }
+        window.onload=function ()
+        {
+	       timer=setInterval(toMove,3000);
+        }
+
+          
+	       
+	      
+}); 
+</script>
+
+		
+	</head>
+	<body>
+		
+	<header class="cl">
+		
+		 <div id="logo">
+			 <a href="#">
+				 <img src="img/top_cpy_logo.png" />
+			 </a>
+		 </div>
+		
+		<div class="search">
+		       <input type="text" value="请输入搜索内容" />
+		       <img src="img/search_icon.png" alt="查询图标"  />
+		    
+		</div>
+		     
+		 <div class="cl">
+		 
+		    <figure class="cl">
+			   <img src="img/top_online_icon.png" />
+			   <figcaption class="cl">
+			        <h5>在线咨询</h5>
+			        <h6>如有问题，请在线咨询</h6>
+			   </figcaption>
+			
+		 
+		    </figure>
+		
+		    <figure class="cl">
+			    <img src="img/top_serve_icon.png" />
+			    <figcaption class="cl">
+			        <h5>服务热线</h5>
+			        <h6>400-1818-979</h6>
+			    </figcaption>
+			
+		 
+		    </figure>
+		
+		 </div>
+	
+	</header>
+	
+	<nav id="navHead" class="cl">
+		
+      <div class="head-v3 cl" >
+	    <div class="navigation-up">
+		<div class="navigation-inner">
+			<div class="navigation-v3">
+				<ul>
+					<li class="nav-up-selected-inpage" _t_nav="home">
+						<h2>
+							<a href="#">首页</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="product">
+						<h2>
+							<a href="#">产品中心</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="wechat">
+						<h2>
+							<a href="#">典型客户</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="solution">
+						<h2>
+							<a href="#">行业解决方案</a>
+						</h2>
+					</li>
+					<li class="" _t_nav="cooperate">
+						<h2>
+							<a href="#">合作伙伴</a>
+						</h2>
+					</li>
+					<li _t_nav="support">
+						<h2>
+							<a href="#">帮助与支持</a>
+						</h2>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	  <div class="navigation-down">
+		<div id="product" class="nav-down-menu menu-1" style="display: none;" _t_nav="product">
+			<div class="navigation-down-inner">
+				<dl style="margin-left: 100px;">
+					<dt>计算机与网络</dt>
+					<dd>
+						<a hotrep="" href="#">云服务器</a>
+					</dd>
+					<dd>
+						<a hotrep="" href="#">弹性Web引擎</a>
+					</dd>
+					<dd>
+						<a hotrep="" href="#">负载均衡</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>存储与CDN</dt>
+					<dd>
+						<a hotrep="" href="#">云数据库</a>
+					</dd>
+					<dd>
+						<a hotrep="" href="#">NoSQL高速存储</a>
+					</dd>
+					<dd>
+						<a hotrep="" href="#">对象存储服务(beta)</a>
+					</dd>
+					<dd>
+						<a hotrep="" href="#">CDN</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>监控与安全</dt>
+					<dd>
+						<a hotrep="hp.header.product.monitoring1" href="#">云监控</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.monitoring2" href="#">云安全</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.monitoring3" href="#">云拨测</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>数据分析</dt>
+					<dd>
+						<a hotrep="hp.header.product.analysis1" href="#">腾讯云分析</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.analysis2" href="#">关键因子</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>开发者工具</dt>
+					<dd>
+						<a hotrep="hp.header.product.devtool1" href="#">移动加速</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.devtool2" href="#">应用加固</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.devtool3" href="#">信鸽推送</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>开发者服务</dt>
+					<dd>
+						<a hotrep="hp.header.product.service1" href="#">安全认证服务</a>
+					</dd>
+					<dd>
+						<a hotrep="hp.header.product.service2" href="#">域名备案</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="solution" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="solution">
+			<div class="navigation-down-inner">
+				<dl style="margin-left: 380px;">
+					<dd>
+						<a class="link" hotrep="hp.header.solution.1" href="#">微信</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a class="link" hotrep="hp.header.solution.2" href="#">游戏</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a class="link" hotrep="hp.header.solution.3" href="#">移动应用</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="support" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="support">
+			<div class="navigation-down-inner">
+				<dl style="margin-left: 610px;">
+					<dd>
+						<a class="link" hotrep="hp.header.support.1" href="#">资料库</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a class="link" hotrep="hp.header.support.2" href="#">论坛</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a class="link" hotrep="hp.header.support.3" href="#">亿元扶持</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="cooperate" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="cooperate">
+			<div class="navigation-down-inner">
+				<dl style="margin-left: 480px;">
+					<dd>
+						<a hotrep="" href="#">代理商</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a hotrep="" href="#">微信服务商</a>
+					</dd>
+				</dl>
+				<dl>
+					<dd>
+						<a hotrep="" href="#">创投机构</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+   </div>
+		
+	</nav>
+	<!-- 大图轮转 -->
+    <div id="scrollImg">
+	
+         <ul  id="bigImg">
+             <li><img src="img/pic_1.jpg"></li>
+             <li><img src="img/pic_2.jpg"></li>
+             <li><img src="img/pic_3.jpg"></li>
+         </ul>
+     
+
+         <ul id="smallImg">
+             <li class="add">&nbsp;</li>
+             <li>&nbsp;</li>
+             <li>&nbsp;</li>
+         </ul>
+         
+    </div>
+	
+	
+	<article>
+		
+		<summary>
+			<em>&bull;</em>
+			<em>&bull;</em>
+			<span>当前位置</span>
+			<em>&bull;</em>
+			<em style="margin-right:20px;">&bull;</em>
+			<a href="#">首页&nbsp;&nbsp;<span>></span></a>
+			<a href="#">关于我们&nbsp;&nbsp;<span>></span></a>
+			<a href="#">新闻中心</a>
+		</summary>
+		<aside>
+			
+			<h1>正大创新（CIT）参加第十七届中国零售业博览会</h1>
+			<p><span>新闻中心</span><span>2016.6.28&nbsp;&nbsp;14:37</span></p>
+			<div>
+				
+			    <p>2015年11月5日—7日由中国连锁经营协会(以下简称CCFA)主办的第十七届中国连锁业会议—第十七届中国零售业博览会在武汉国际博览中心举办。正大创新（CIT）由公司执行董事兼全国销售总监徐珏先生，销售总监周佩小姐带领西南、华南分公司的优秀同事共同参加了本次CHINA SHOP博览会。</p>
+				<p>对于中国零售行业的发展，正大创新（CIT）愿与CCFA其他成员共同努力，坚守零售本质，探求转型之道，打开创新之门。</p>
+				<img src="img/pic_1.jpg" alt="介绍图" />
+				<p>本届会议主题为“变革 融合 再造零售价值”，聚焦互联网+零售大背景下的变革与未来;探讨以消费者需求为中心，零售业如何回归零售本质;通过创新、融合，实现转型突破和新增长。会议还将围绕全渠道创新、零售供应链管理、社区商业发展、专卖店连锁发展等议题开展深入交流。</p>
+				<img src="img/pic_2.jpg" alt="介绍图" />
+				<p>正大创新（CIT）在帮助国内传统零售企业实现转型发展的过程中，充分考虑了商家与消费者之间的特殊关系。利用互联网时代特点，实现创新性O2O运营模式，通过大数据采集、分析，指导营销活动的开展，并对效果进行可控性调整，通过详细周密的数据统计，反馈到商家的整体营销策略中。</p>
+				
+			</div>
+		
+		
+			
+		</aside>
+		
+	</article>
+	
+	
+	<footer class="cl">
+		
+		<p>
+			<a href="#">首页</a>|<a href="#">联系我们 </a>|<a href="#">法律公告</a>|<a href="#">网站地图</a>|<a href="#">伙伴链接</a>
+		</p>
+		
+		<p>Copyright&nbsp;®t&nbsp;2010-2015 杭州铁塔数据科技有限公司版权所有 浙ICP备15006262号 By WWW</p>
+		
+	</footer>
+		
+		
+    <script type="text/javascript" src="js/perfect-move.js" ></script>	
+	</body>
+</html>

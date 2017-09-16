@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>收银系统</title>
+		<meta name="description" content="铁塔公司,云管理平台,科技发展">
+        <meta name="keyword" content="铁塔数据,正大创新">
+     
+		<link href="../css/reset.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<script src="../js/jquery-1.8.3.min.js"></script>
+       
+		<!--[if lt IE 9]>
+        <script src="ie8/html5shiv.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+	
+	  <div id="cmpMain">
+	  	<!-- topbar start-->
+	  	<div class="topbar">
+	  		<div class="topbar-range cl">
+	  			<h6>欢迎，请<a href="#" id="topLogin">登录</a>云管理平台</h6>
+	  			<div>
+	  				 <!--<input type="text" value="搜索你想了解的" maxlength="20" class="topbar_search_ipt" />
+	  				  <img src="../img/search_normal.png" class="cursor" />--> 
+	  		    </div>
+	  		</div>
+	  		
+	  	</div>
+	  	<!-- topbar end-->
+	  	
+	  	<!-- nav start-->
+	  	<div class="nav cl">
+	  		<hgroup>
+	  		    <img src="../img/logo.png" alt="铁塔科技" class="logo" />
+	  	        <nav>	
+	  	        	<ul class="nav-ul cl">
+	  	        		<li><a href="../index.html">首页</a></li>
+	  	        		<li><a href="#">产品</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="cashierSystem.html">收银系统</a></li>
+	  	        				<li><a href="clientRelation.html">客户关系</a></li>
+	  	        				<li><a href="#">资产管理</a></li>
+	  	        				<li><a href="#">商业运营</a></li>
+	  	        				<li><a href="#">精准运营</a></li>
+	  	        				<li><a href="#">大数据分析</a></li>
+	  	        				<li><a href="#">云管理工具</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">解决方案</a>
+	  	        		</li>
+	  	        		<li><a href="#">合作和生态</a></li>
+	  	        		<li><a href="#">云工具</a></li>
+	  	        		<li><a href="#">关于我们</a></li>
+	  	        	</ul>
+	  	    	  
+	  	        </nav>
+	        </hgroup>
+	  	</div>
+	  	<!-- nav end-->
+	  	
+	  	<div id="sub_cashier_content">
+	  		<div class="cl div-odd div-title">
+	  		  <article class="cl">
+	  			<section>
+	  			   <h1><img src="../img/funcbar_3.png" />FeTower收银系统概述</h1>
+	  			   <p>FeTower收银系统属于铁塔智慧商业管理平台的前端收银管理产品，可作为购物中心租赁商铺、传统零售企业店面的商品进销存和收款管理功能，
+	  			   	可以为创新型零售企业提供智能导购和自助收银解决方案。本系统主要可部署在传统收银机和新兴的安卓智能终端上，通过与企业后台业务管理、微信公众平台、CRM系统以及银联刷卡、微信支付宝等移动支付平台进行对接，提升零售企业在收款环节的客户体验。</p>
+	  			</section>
+	  			<div class="pull-right" style="width: 44%">
+	  			   <img src="../img/sub_img_1.png" class="pull-right" style="width:100%;" />
+	  			</div>
+	  		  </article>
+	  		</div>
+	  		
+	  		<div class="cl div-1">
+	  		  <article>
+	  			<section>
+	  			   <h2>收银功能</h2>
+	  			   <p>可通过与银联刷卡、银联闪付、Apple Pay和支付宝、微信等各类支付方式进行集成和对接，可安装部署在国内外主流品牌
+	  			   	的各种类收款机上为收银员提供方便、快捷的收银服务。系统功能特点：<br />
+	  			   		 1.系统提供多种优惠方式、支付方式的组合支付，方便企业进行各类支付服务;<br />
+	  			   		 2.提供灵活多变的商品定价和折扣功能，实现企业进行各种类型的促销和折扣方案;<br />
+	  			   		 3.与FeTower的CRM系统集成，可实现通过会员积分、优惠券、现金券、储值卡等方式的支付支持;<br />
+	  			   </p>
+	  			</section>
+	  			<img src="../img/sub_img_2.png"  />
+	  		  </article>
+	  		</div>
+	  		
+	  		<div class="cl div-odd div-2">
+	  		  <article>
+	  			<section>
+	  			   <h2>商品管理</h2>
+	  			   <p>收银系统作为零售企业的管理终端，可提供商品的进、销、存管理功能。通过角色权限的划分，实现店长、
+	  			   	采购和收银员分别对商品的定义、价格管理、出入库和盘点统计等商品管理功能。</p>
+	  			</section>
+	  			<img src="../img/sub_img_3.png"  />
+	  		  </article>
+	  		</div>
+	  		
+	  		<div class="cl div-3">
+	  		  <article>
+	  			<section>
+	  			   <h2>导购功能</h2>
+	  			   <p>导购作为零售行业店面的销售人员，对客户的定位判断以及销售说辞将会决定着客户的提袋率。FeTower的CRM模块通过会员的交互行为分析形成会员画像数据，并最终呈现在导购的智能终端上，辅助前端销售人员准确判断客户的行为来提高销售成单率。
+FeTower收银系统的导购模块，提供如下功能：<br />
+	  			   		 1.会员识别，通过移动终端LBS引擎动态显示店内和周围的会员位置，在CRM模块会员特征和位置数据的指引下准确识别会员；<br />
+	  			   		 2.会员画像，采用图形的方式呈现会员标签属性，提前了解会员喜好、购物取向等特征，从而通过销售话术提升提袋率；<br />
+	  			   		 3.订单录入，导购人员作为消费者购物的跟随人员，实时查询库存和录入订单数据，提升购物过程中的体验度水平和满意度；<br />
+	  			   		 4.自助支付，导购终端提供便捷的移动支付功能，通过微信支付宝等移动支付手段快捷支付，减少排队；<br />
+	  			   </p>
+	  			</section>
+	  			<img src="../img/sub_img_4.png"  />
+	  		  </article>
+	  		</div>
+	  		
+	  		<div class="cl div-odd div-4">
+	  		  <article>
+	  			<section>
+	  			   <h2>电子小票</h2>
+	  			   <p>随着智能手机的普及，微信已经是最方便的社交沟通工具。FeTower收银系统可通过与CRM模块集成，向零售企业提供围绕微信平台打造的公众号、会员卡、卡券、电子小票等一体化的管理平台，实现与购物者的双向互动渠道。
+	  			   	针对于收银模块，该平台可以实现电子小票功能：购物者注册会员后，可通过微信公众号平台发送购物的电子小票，在电子小票上实现在线的支付、查看转发、售后退货和评价调查等功能，通过方便便捷的售后服务，提升客户满意度
+	  			   </p>
+	  			</section>
+	  			<img src="../img/sub_img_5.png"  />
+	  		  </article>
+	  		</div>
+	  		
+	  	
+	  		<article class="cl">
+	  			   <h2>辅助功能</h2>
+	  			   <ul>
+	  			   	  <li>备屏功能，提供广告播放、支付扫描等延伸功能，为企业宣传和提升客户体验服务；</li>
+	  			   	  <li>完备的安全保护策略，系统可实现无网或断网状态下的收银支持，实现联网之后自动数据上传。系统提供断电保护功能，不会因机器故障而造成数据丢失；</li>
+	  			   	  <li>系统支持多种输入方式，提供键盘输入、触摸屏输入、快捷键、条形码和二维码的扫描输入等多种数据输入方式；</li>
+	  			   </ul>
+	  		</article>
+	  
+	  		
+	  		
+	  		
+	  	</div>
+	  
+	 
+		<!-- footer start-->
+		<footer>
+			<aside class="cl">
+				 <ul>
+				 	 <li><a href="#"><img src="../img/weibo.png" alt="微博"/></a></li>
+				 	 <li class="footer_dialog"><a href="#"><img src="../img/weixin.png" alt="微信"/></a></li>
+				 	 <li><img src="../img/wx_dialog.png" alt="微信框" class="wx_dialog"/>
+				 	     <div class="cl">	
+				 	     	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;扫一扫<br />关注公众微信</p>
+				 	     	<img src="../img/wx_code.png" alt="二维码" />
+				 	     </div>
+				     </li>
+				
+				 </ul>
+				 
+				 <div>
+				 	<p>杭州铁塔数据科技有限公司<span>&nbsp;&nbsp;浙CP备15022412号</span><p>
+				 	<p>总部地址：杭州市西湖区文二西路100号智慧大厦30楼</p>
+				 </div>
+				
+			</aside>
+			<p>&nbsp;</p>
+		</footer>
+		<!-- footer end-->
+		<a href="javascript:;" class="backToTop" title="返回顶部"></a>
+	  </div>
+	</body>
+	<script src="../js/getHover.js"></script>
+	<script>
+		$(function(){
+			 $(".nav-ol>li").children("a[href$='.html']").hover(function(){
+			  	  $(this).css({"color":"#008ce6"});
+			  },function(){
+			  	$(this).css({"color":"#7b7b7b"});
+			  })
+			 
+              $(".nav-ul").navSlideDown();//nav的slidedown下拉
+             
+              /*底部微信扫一扫 --start*/
+              $("footer .footer_dialog").next().hide();
+              $("footer .footer_dialog").hover(function(){
+              	  $(this).next().show();
+              },function(){
+              	  $(this).next().hide("fast");
+              });
+              /*底部微信扫一扫 --end*/
+
+              /*top返回顶部--start*/
+              $(".backToTop").goToTop();
+              $(window).bind('scroll resize',function(){
+                   $(".backToTop").goToTop({
+                       pageWidth:960,
+                       duration:400
+                    });
+              });
+              /*top返回顶部--end*/
+             
+            // $("#sub_cashier_content>div").subHover();
+        });
+	</script>
+	
+</html>
+

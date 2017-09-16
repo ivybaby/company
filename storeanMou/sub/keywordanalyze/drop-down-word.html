@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>下拉框取词</title>
+		<meta name="description" content="">
+        <meta name="keyword" content="">
+       
+		<link href="../../css/reset.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link href="../../css/style.css" rel="stylesheet">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../css/dataTables.bootstrap.css">
+	    <script src="../../js/jQuery-2.1.4.min.js"></script>
+	    <script type="text/javascript" src="../../js/echarts-all.js"></script>
+		
+		<!--[if lt IE 9]>
+        <script src="../ie8/html5shiv.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+	
+	  <div id="">
+	  	<!-- topbar start-->
+	  	<div class="topbar">	
+	  	</div>
+	  	<!-- topbar end-->
+	  	
+	  	<!-- nav start-->
+	  	<div class="nav cl">
+	  		<hgroup>
+	  		    <img src="../../img/logo.png" alt="" class="logo" />
+	  		    <div class="topbar-range cl pull-right">
+	  			    <a href="#" id="" class="">登录</a><a href="#" class="bg-red">注册</a>
+	  			    <div>
+	  				 <!--<input type="text" value="搜索你想了解的" maxlength="20" class="topbar_search_ipt" />
+	  				  <img src="img/search_normal.png" class="cursor" />--> 
+	  		        </div>
+	  		    </div>
+	  		    
+	  		    
+	  	        <nav>	
+	  	    	   <ul class="nav-ul cl text-center">
+	  	        		<!--<li><a href="index.html">首页</a></li>-->
+	  	        		<li><a href="#">店铺分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="../storeanalyze/store-anlyze.html">基础指标分析</a></li>
+	  	        				<li><a href="#">宝贝数量下标</a></li>
+	  	        				<li><a href="#">宝贝下架时间分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">宝贝分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="#">宝贝基础指标分析</a></li>
+	  	        				<li><a href="#">宝贝评价分析</a></li>
+	  	        				<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">关键词分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="../keywordanalyze/drop-down-word.html">下拉框取词</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-anlyze.html">标题分词工具</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-combine-anlyze.html">关键词组合工具</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">排名分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="#">淘宝搜索排名分析</a></li>
+	  	        				<li><a href="#">天猫搜索排名分析</a></li>
+	  	        				<li><a href="#">手机淘宝APP搜索排名</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">支持</a></li>
+	  	        	</ul>
+	  	        </nav>
+	  	        
+	        </hgroup>
+	        
+	  	</div>
+	  	<!-- nav end-->
+	  	
+	    
+	    <!--  start -->
+	    <div class="sub-content">
+	    	<div class="data-table">
+	    	   <h3 class="font-16"><a href="#" class="text-red">店铺参谋[dianpucanmou.com]</a><em>>></em><span>下拉框取词</span></h3>
+	    	   <div class="data-head cl">
+	    	   	    <div class="col-2"></div>
+	    	   	    <div class="col-8">
+	    	   	    <label class="font-16 label pull-left">请输入关键词：</label>
+	    	   	    <input type="text" value="" class="input pull-left" />
+	    	   	    <select class="select pull-left">
+	    	   	    	<option>深度挖掘1</option>
+	    	   	    	<option>深度挖掘2</option>
+	    	   	    </select>
+	    	   	    <select class="select pull-left">
+	    	   	    	<option>淘宝搜索下拉词</option>
+	    	   	    	<option>天猫搜索下拉词</option>
+	    	   	    	<option>手机淘宝搜索下拉词</option>
+	    	   	    	
+	    	   	    </select>
+	    	   	    <input type="button" value="查询" class="btn pull-left" style="margin:0 10px;" />
+	    	   	    </div>
+	    	   	    
+	    	   </div>
+	    	   <div class="data-body cl">
+	    	   	   
+	    	   	    <div class="row" style="margin-top: 10px;">
+	    	   	    	<table class="table table-bordered text-center">
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>淘宝首页推荐词</td>
+	    	   	    	         				<td><a href="#">新款连衣裙</a> -<a href="#">四件套</a> - <a href="#">潮流T恤</a> - <a href="#">时尚女鞋</a> - <a href="#">短裤</a> - <a href="#">半身裙</a> - <a href="#">男士外套</a>
+	    	   	    	         					 - <a href="#">墙纸</a> - <a href="#">行车记录仪</a> - <a href="#">新款男鞋</a> - <a href="#">耳机</a> - <a href="#">时尚女包</a> - <a href="#">沙发</a> </td>
+	    	   	    	         				<td><a href="#">查看历史推荐词</a></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>淘宝首页天猫推荐词</td>
+	    	   	    	         				<td><a href="#">新款连衣裙</a> -<a href="#">四件套</a> - <a href="#">潮流T恤</a> - <a href="#">时尚女鞋</a> - <a href="#">短裤</a> - <a href="#">半身裙</a> - <a href="#">男士外套</a>
+	    	   	    	         					 - <a href="#">墙纸</a> - <a href="#">行车记录仪</a> - <a href="#">新款男鞋</a> - <a href="#">耳机</a> - <a href="#">时尚女包</a> - <a href="#">沙发</a> </td>
+	    	   	    	         				<td><a href="#">查看历史推荐词</a></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>天猫首页推荐词</td>
+	    	   	    	         				<td><a href="#">新款连衣裙</a> -<a href="#">四件套</a> - <a href="#">潮流T恤</a> - <a href="#">时尚女鞋</a> - <a href="#">短裤</a> - <a href="#">半身裙</a> - <a href="#">男士外套</a>
+	    	   	    	         					 - <a href="#">墙纸</a> - <a href="#">行车记录仪</a> - <a href="#">新款男鞋</a> - <a href="#">耳机</a> - <a href="#">时尚女包</a> - <a href="#">沙发</a> </td>
+	    	   	    	         				<td><a href="#">查看历史推荐词</a></td>
+	    	   	    	         		    </tr>
+	    	   	    	         		
+	    	   	    	         		</tbody>
+	    	   	    	</table>
+	    	   	    	<table class="table table-bordered text-center">
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>淘宝搜索框引导词</td>
+	    	   	    	         				<td><a href="#">新款连衣裙</a></td>
+	    	   	    	         				<td>天猫搜索框引导词</td>
+	    	   	    	         				<td><a href="#">拉杆箱 </a></td>
+	    	   	    	         				<td>京东搜索框引导词</td>
+	    	   	    	         				<td><a href="#">新款连衣裙</a> -<a href="#">四件套</a> - <a href="#">潮流T恤</a> - <a href="#">时尚女鞋</a> - <a href="#">短裤</a> - <a href="#">半身裙</a> - <a href="#">男士外套</a>
+	    	   	    	         					 - <a href="#">新款男鞋</a> - <a href="#">耳机</a> - <a href="#">时尚女包</a> - <a href="#">沙发</a> </td>
+	    	   	    	         			
+	    	   	    	         		   </tr>
+	    	   	    	         		</tbody>
+	    	   	    	</table>
+	    	   	    </div>
+	    	   	    <div class="row" style="margin-top: 40px;">
+	    	   	    	<h5>淘宝搜索搜索下拉框选词：</h5>
+	    	   	    	<ul style="list-style: decimal inside;" class="font-14 text-gray list-introduce">
+	    	   	    		<li>看店宝-淘宝搜索搜索下拉框选词工具通过淘宝搜索搜索下拉框获取到适合淘宝搜索高流量高转化率高性价比优质相关关键词，查看关键词的最佳类目、竞争宝贝产品商品数量、自然搜索排名、天猫搜索、对获取到的关键词建议使用淘宝指数或者数据魔方对成交指数进行数据分析来选取合适自己宝贝的关键词，是卖家标题优化和直通车选词的好帮手</li>
+	    	   	    		<li>使用看店宝关键词挖掘好处：可以快速获取到各地地方的下拉框、挖掘深度大可以找到更多好词、有竞争宝贝数量、可以下载整理、有各种相关参数直接查看比较、可以快速分析相关环境</li>
+	    	   	    	</ul>
+	    	   	    </div>
+	    	   	    <div class="row" style="margin-top: 40px;">
+	    	   	    	<h5>下拉框选词功能参数和数据说明：</h5>
+	    	   	    	<ul style="list-style: decimal inside;" class="font-14 text-gray list-introduce">
+	    	   	    		<li>挖掘类型：看店宝关键词挖掘可以从淘宝搜索、天猫搜索、手机淘宝搜索、阿里巴巴全球速卖通Aliexpress搜索、一淘搜索框、京东搜索等下拉框挖掘推荐关键词</li>
+	    	   	    		<li>挖掘深度：挖掘深度是指从淘宝那里挖掘层次，选挖掘深度为2，就会用第一次挖掘出来的挖掘出来的关键词再次去挖掘，从而有更多关键词</li>
+	    	   	    		<li>相关宝贝数量：这个关键词有多少相关的宝贝数量，宝贝数越多代表竞争越大，不同地方的宝贝数量不一样，淘宝和天猫的数量不一样，淘宝PC端和手淘的宝贝数也不一样</li>
+	    	   	    		<li>推荐类目：这个关键词有一个淘宝认为最适合什么类目的，就会有推荐一个类目显示出来，很多不在淘宝直通车TOP20万关键词库内的就不显示推荐类目</li>
+	    	   	    		<li>推荐属性词：根据用户搜索的数量结合成交转换率通过推荐系统计算得出来的重点推荐属性词，特别是变色词，是淘宝搜索中具有高搜索量高转化词，只有重点关键词才有显示</li>
+	    	   	    	</ul>
+	    	   	    </div>
+	    	   	    
+	    	   </div>
+	    	</div>
+	    	
+	       
+	    </div>	
+      <!--  end -->
+	  </div>
+	  
+	  <footer class="row">
+	  	 <div class="row footer-center">
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol class="">
+	  	        	<li><a href="#">基础指标分析</a></li>
+	  	        	<li><a href="#">宝贝数量下标</a></li>
+	  	        	<li><a href="#">宝贝下架时间分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>宝贝分析</h4>
+	  	 		<ol>
+	  	            <li><a href="pages/cashierSystem.html">宝贝基础指标分析</a></li>
+	  	        	<li><a href="pages/clientRelation.html">宝贝评价分析</a></li>
+	  	        	<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">下拉框取词</a></li>
+	  	       		<li><a href="pages/clientRelation.html">标题分词工具</a></li>
+	   				<li><a href="#">关键词组合工具</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>排名分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">淘宝排名分析</a></li>
+	  	  			<li><a href="pages/clientRelation.html">天猫排名分析</a></li>
+      				<li><a href="#">手机淘宝APP排名查询</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 </div>
+	  </footer>
+	</div>
+	</body>
+	<script src="../../js/getHover.js"></script>
+
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../js/jquery.dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.min.js"></script>
+    
+	<script>
+		$(function(){
+			
+			  var obg,ocolor;
+			  $(".nav-ol>li").hover(function(){
+			  	  if($(this).children("a[href$='.html']").length>0){
+			  	  	 obg=$(this).css("background");
+                     ocolor=$(this).children("a").css("color");
+			  	     $(this).children("a").css({"color":"#fff"});
+			  	     $(this).css({"background":"#1fa87a"});
+			  	  }
+			  	 
+			  },function(){
+			  	if($(this).children("a[href$='.html']").length>0){
+			  	   $(this).css({"background":obg});
+			  	   $(this).children("a").css({"color":"#000"});
+			  	}
+			  });
+              
+              $(".nav-ul").navSlideDown();//nav的slidedown下拉
+              
+              /*tab*/
+			
+			/* $("#controlTab").tab({
+			       tabItem:".tab-item",
+			       tabContent:".tab-content"
+		     });*/
+		     $("#timeChart").css({"width":$("#timeChart").closest("div").outerWidth()+'px'});
+		     $("#lineChart").css({"width":$("#lineChart").closest("div").outerWidth()+'px'});
+		     var tabItem=".tab-item";
+			 var tabContent=".tab-content";
+		     $(tabContent).hide();
+		     $(tabItem).each(function(){
+			     if($(this).hasClass("tab-item-active")){
+				    var $itemHref=$(this).attr("href");
+				    $($itemHref).show();
+				    return;
+			     }
+		     });
+		     $(tabItem).on("click",function(e){
+			    e.preventDefault();
+			    if($(this).hasClass("tab-item-active")){
+				    return;
+			    }
+			    else{
+				   $(tabItem).removeClass("tab-item-active");
+			       $(this).addClass("tab-item-active");
+			       $(tabContent).hide();
+			       $($(this).attr("href")).show();
+			   }
+			
+		    });
+			
+              
+              $("#example1").DataTable();
+              $('#example2,#example3').DataTable({
+                 "paging": true,
+                 "lengthChange": false,
+                 "searching": false,
+                 "ordering": true,
+                 "info": true,
+                 "autoWidth": false
+              });
+              
+              /**/
+             $("td").each(function(){
+             	if($(this).children(".show-img").length>0){
+             		var $obj=$(this).children(".show-img");
+             		var oheight=$(this).outerWidth()-8;
+             		$(this).hover(function(){
+             			$obj.append("<div class='big-img'><img src='"+$obj.children(".main-img").attr("src")+"' /></div>").end().find(".big-img").css({"left":oheight+'px'});
+             			
+             		},function(){
+             			$(this).find(".big-img").remove();
+             		})
+             	}
+             })
+             
+             
+            window.onresize=window.onload=function(){
+        	   
+        	   
+			var option = {
+   
+      };
+       
+            var byId = function(id) {
+				return document.getElementById(id);
+			  };
+			/*var barChart = echarts.init(byId('timeChart'));
+			barChart.setOption(option);*/
+			
+			 
+            }
+              
+    });
+    
+    
+    
+</script>
+	
+</html>
+

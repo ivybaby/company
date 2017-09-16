@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>手机淘宝APP搜索排名</title>
+		<meta name="description" content="">
+        <meta name="keyword" content="">
+       
+		<link href="../../css/reset.css" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <link href="../../css/style.css" rel="stylesheet">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../css/dataTables.bootstrap.css">
+	    <script src="../../js/jQuery-2.1.4.min.js"></script>
+	    <script type="text/javascript" src="../../js/echarts-all.js"></script>
+		
+		<!--[if lt IE 9]>
+        <script src="../ie8/html5shiv.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+	
+	  <div id="">
+	  	<!-- topbar start-->
+	  	<div class="topbar">	
+	  	</div>
+	  	<!-- topbar end-->
+	  	
+	  	<!-- nav start-->
+	  	<div class="nav cl">
+	  		<hgroup>
+	  		    <img src="../../img/logo.png" alt="" class="logo" />
+	  		    <div class="topbar-range cl pull-right">
+	  			    <a href="#" id="" class="">登录</a><a href="#" class="bg-red">注册</a>
+	  			    <div>
+	  				 <!--<input type="text" value="搜索你想了解的" maxlength="20" class="topbar_search_ipt" />
+	  				  <img src="img/search_normal.png" class="cursor" />--> 
+	  		        </div>
+	  		    </div>
+	  		    
+	  		    
+	  	        <nav>	
+	  	    	   <ul class="nav-ul cl text-center">
+	  	        		<!--<li><a href="index.html">首页</a></li>-->
+	  	        		<li><a href="#">店铺分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="../storeanalyze/store-anlyze.html">基础指标分析</a></li>
+	  	        				<li><a href="">宝贝数量下标</a></li>
+	  	        				<li><a href="#">宝贝下架时间分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">宝贝分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="">宝贝基础指标分析</a></li>
+	  	        				<li><a href="">宝贝评价分析</a></li>
+	  	        				<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">关键词分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="../keywordanalyze/drop-down-word.html">下拉框取词</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-anlyze.html">标题分词工具</a></li>
+	  	        				<li><a href="../keywordanalyze/keyword-combine-anlyze.html">关键词组合工具</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">排名分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="pages/cashierSystem.html">淘宝搜索排名分析</a></li>
+	  	        				<li><a href="pages/clientRelation.html">天猫搜索排名分析</a></li>
+	  	        				<li><a href="#">手机淘宝APP搜索排名</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">支持</a></li>
+	  	        	</ul>
+	  	        </nav>
+	  	        
+	        </hgroup>
+	        
+	  	</div>
+	  	<!-- nav end-->
+	  	
+	    
+	    <!--  start -->
+	    <div class="sub-content">
+	    	<div class="data-table">
+	    	   <h3 class="font-16"><a href="#" class="text-red">店铺参谋[dianpucanmou.com]</a><em>>></em><span>手机淘宝APP搜索排名</span></h3>
+	    	   <div class="data-head cl">
+	    	   	    <label class="font-16 label pull-left">搜索关键词：</label>
+	    	   	    <input type="text" value="" class="input pull-left" />
+	    	   	    <select class="select pull-left">
+	    	   	    	<option>苹果ipad平台</option>
+	    	   	    	<option>苹果iphone手机</option>
+	    	   	    	<option>Android手机</option>
+	    	   	    	<option>Android平板</option>
+	    	   	    </select>
+	    	   	    <select class="select pull-left">
+	    	   	    	<option>默认</option>
+	    	   	    	<option>按销量查询</option>
+	    	   	    	<option>价格从大到小</option>
+	    	   	    	<option>价格从小到大</option>
+	    	   	    	<option>店家信誉排名</option>
+	    	   	    </select>
+	    	   	    <select class="select pull-left">
+	    	   	    	<option>抓取前1页</option>
+	    	   	    	<option>抓取前5页</option>
+	    	   	    	<option>抓取前10页</option>
+	    	   	    	<option>抓取前15页</option>
+	    	   	    	<option>抓取前20页</option>
+	    	   	    	<option>抓取前25页</option>
+	    	   	    	<option>抓取前30页</option>
+	    	   	    	<option>抓取前35页</option>
+	    	   	    	<option>抓取前40页</option>
+	    	   	    	<option>抓取前45页</option>
+	    	   	    	<option>抓取前50页</option>
+	    	   	    	<option>抓取前100页</option>
+	    	   	    </select>
+	    	   	    <input type="button" value="提交" class="btn pull-left" style="margin:0 10px;" />
+	    	   	    <div class="data-head-ck pull-left">
+	    	   	    	<input type="checkbox"  /> 
+	    	   	    	<label>只列出该旺旺的商品</label>
+	    	   	    </div>
+	    	   	    <input type="text" value="" class="input pull-left"/>
+	    	   </div>
+	    	   <div class="data-body cl">
+	    	   	    <div class="row cl">
+	    	   	    	<ul class="table-list text-center cl">
+	    	   	    			<li class="table-cell">平均价</li>
+	    	   	    			<li>28394.90</li>
+	    	   	    			<li class="table-cell">最低价</li>
+	    	   	    			<li>280</li>
+	    	   	    			<li class="table-cell">最高价</li>
+	    	   	    			<li>38494.83</li>
+	    	   	    			<li class="table-cell">平均成交</li>
+	    	   	    			<li>282笔</li>
+	    	   	    			<li class="table-cell">最低成交</li>
+	    	   	    			<li>52笔</li>
+	    	   	    			<li class="table-cell">最高成交</li>
+	    	   	    			<li>3552笔</li>
+	    	   	    			<li class="table-cell">成交汇总</li>
+	    	   	    			<li>937笔</li>
+	    	   	    	</ul>
+	    	   	    </div>
+	    	   	    
+	    	   	    <div class="row" style="margin-top: 10px;">
+	    	   	    	<div class="cl btn-download">
+	    	   	    		<input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	</div>
+	    	   	    	<table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>排名</th>
+                        <th>主图</th>
+                        <th>宝贝标题</th>
+                        <th>促销</th>
+                        <th>PC价</th> 
+                        <th>手机价</th>
+                        <th>成交</th>
+                        <th>销量</th>
+                        <th>掌柜旺旺</th>
+                        <th>同款</th>
+                        <th>DSR</th>
+                        <th>信用</th>
+                        <th>好评率</th>
+                        <th>发货地</th>
+                        <th>收藏</th>
+                        <th>浏览量</th>
+                        <th>收藏比</th>
+                        <th>评价</th>
+                        <th>创建时间</th>
+                        <th>下架剩余</th>
+                        <th>分析</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_1.png" alt=""  />
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        <td>-</td>
+                        <td>4.8</td>
+                        <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td>130天前</td>
+                        <td>20时17分30秒</td>
+                        <td><a href="app-anlyze.html">店铺</a><a href="app-anlyze.html">宝贝</a></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/code_now.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>电脑</td>
+                        <td></td>
+                        <td>283.00</td>
+                        <td>83</td>
+                        <td>83</td>
+                        <td>29383</td>
+                        <td></td>
+                        <td>-</td>
+                        <td>4.99</td>
+                        <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                        <td>99%</td>
+                        <td>浙江杭州</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td>130天前</td>
+                        <td>20时17分30秒</td>
+                        <td><a href="#">店铺</a><a href="#">宝贝</a></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_1.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        <td>-</td>
+                        <td>4.8</td>
+                        <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td>130天前</td>
+                        <td>20时17分30秒</td>
+                        <td><a href="#">店铺</a><a href="#">宝贝</a></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_3.png" alt=""  />
+                        	
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        <td>-</td>
+                        <td>4.8</td>
+                        <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td>130天前</td>
+                        <td>20时17分30秒</td>
+                        <td><a href="#">店铺</a><a href="#">宝贝</a></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>
+                        	<div class="show-img"><img class="main-img" src="../../img/icon_1.png" alt=""  />
+                        	</div>
+                         </td>
+                        <td>手机</td>
+                        <td>苏宁特惠</td>
+                        <td>9283.00</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>29383</td>
+                        <td>苏宁易购旗舰店</td>
+                        <td>-</td>
+                        <td>4.8</td>
+                        <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td>130天前</td>
+                        <td>20时17分30秒</td>
+                        <td><a href="#">店铺</a><a href="#">宝贝</a></td>
+                      </tr>
+                    
+                    </tbody>
+                   
+                  </table>
+	    	   	    </div>
+	    	   	    <div>
+	    	   	    	<div id="controlTab">
+    			           <a href="#item1" class="tab-item tab-item-active">统计分析</a>
+    			           <a href="#item2" class="tab-item">事件分析</a>
+    			           <a href="#item3" class="tab-item">卖家分析</a>
+    			           <a href="#item4" class="tab-item">成交分析</a>
+    			           <a href="#item5" class="tab-item">价格分析</a>
+    		            </div>
+    		            <div>
+    		            	 <div id="item1" class="tab-content" style="padding-top: 10px;">
+    		            	 	
+	    	   	    	<div class="cl btn-download">
+	    	   	    		<input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	</div>
+	    	   	    	<table id="example3" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>最低价</th>
+                        <th>最高价</th>
+                        <th>平均价</th>
+                        <th>最低成交</th> 
+                        <th>最高成交</th>
+                        <th>平均成交</th>
+                        <th>成交汇总</th>
+                        <th>成交占比</th>
+                        <th>最低销量</th>
+                        <th>平均销量</th>
+                        <th>销量汇总</th>
+                        <th>销量占比</th>
+                        <th>dsr最低</th>
+                        <th>dsr最高</th>
+                        <th>平均dsr</th>
+                        <th>最低收藏</th>
+                        <th>最高收藏</th>
+                        <th>平均收藏</th>
+                        <th>天猫</th>
+                        <th>淘宝</th>
+                        <th>信誉最低</th>
+                        <th>信誉最高</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>所以</td>
+                        <td>
+                        	579.00
+                         </td>
+                        <td>9999.00</td>
+                        <td>678.00</td>
+                        <td>0</td>
+                        <td>8799</td>
+                        <td>768</td>
+                        <td>8900</td>
+                        <td>78%</td>
+                        <td>0</td>
+                        <td>48</td>
+                       
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        	
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                      </tr>
+                         <tr>
+                        <td>第1页</td>
+                        <td>
+                        	579.00
+                         </td>
+                        <td>9999.00</td>
+                        <td>678.00</td>
+                        <td>0</td>
+                        <td>8799</td>
+                        <td>768</td>
+                        <td>8900</td>
+                        <td>78%</td>
+                        <td>0</td>
+                        <td>48</td>
+                       
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        	
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                      </tr>
+                          <tr>
+                        <td>第2页</td>
+                        <td>
+                        	579.00
+                         </td>
+                        <td>9999.00</td>
+                        <td>678.00</td>
+                        <td>0</td>
+                        <td>8799</td>
+                        <td>768</td>
+                        <td>8900</td>
+                        <td>78%</td>
+                        <td>0</td>
+                        <td>48</td>
+                       
+                        <td>99%</td>
+                        <td>江苏</td>
+                        <td>829933</td>
+                        <td>3.2%</td>
+                        <td>383</td> 
+                        <td>383</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                        	
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                         <td>
+                        	<img src="../../img/king.png" class="grade-degree" />
+                        </td>
+                      </tr>
+                     
+                    </tbody>
+                   
+                  </table>
+    		            	 </div>
+    		            	 <div id="item2" class="tab-content" style="padding-top: 10px;width: 100%;">
+    		            	 	 <div class="chart" id="timeChart" style="height: 400px;"></div>
+    		            	 	 <div class="cl btn-download">
+	    	   	    		        <input type="button" value="数据下载" class="btn pull-right btn-defalut btn-small" style="">
+	    	   	    	         </div>
+	    	   	    	         <div class="row">
+	    	   	    	         	<table class="table table-bordered text-center table-small">
+	    	   	    	         		<thead>
+	    	   	    	         			<tr>
+	    	   	    	         				<th></th>
+	    	   	    	         				<th>总计</th>
+	    	   	    	         				<th colspan="4">0:00</th>
+	    	   	    	         				<th colspan="4">1:00</th>
+	    	   	    	         				<th colspan="4">2:00</th>
+	    	   	    	         				<th colspan="4">3:00</th>
+	    	   	    	         				<th colspan="4">4:00</th>
+	    	   	    	         				<th colspan="4">5:00</th>
+	    	   	    	         				<th colspan="4">6:00</th>
+	    	   	    	         			    <th colspan="4">7:00</th>
+	    	   	    	         				<th colspan="4">8:00</th>
+	    	   	    	         				<th colspan="4">9:00</th>
+	    	   	    	         				<th colspan="4">10:00</th>
+	    	   	    	         				<th colspan="4">11:00</th>
+	    	   	    	         				<th colspan="4">12:00</th>
+	    	   	    	         				<th colspan="4">13:00</th>
+	    	   	    	         			    <th colspan="4">14:00</th>
+	    	   	    	         				<th colspan="4">15:00</th>
+	    	   	    	         				<th colspan="4">16:00</th>
+	    	   	    	         				<th colspan="4">17:00</th>
+	    	   	    	         				<th colspan="4">18:00</th>
+	    	   	    	         				<th colspan="4">19:00</th>
+	    	   	    	         				<th colspan="4">20:00</th>
+	    	   	    	         			    <th colspan="4">21:00</th>
+	    	   	    	         				<th colspan="4">22:00</th>
+	    	   	    	         				<th colspan="4">23:00</th>
+	    	   	    	         				
+	    	   	    	         			</tr>
+	    	   	    	         		</thead>
+	    	   	    	         		<tbody>
+	    	   	    	         			<tr>
+	    	   	    	         				<td>一</td>
+	    	   	    	         				<td class="text-red">5</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>二</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>三</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>四</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>五</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>六</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<td>日</td>
+	    	   	    	         				<td class="text-primary">3</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td></td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>1</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         				<td>-</td>
+	    	   	    	         		    </tr>
+	    	   	    	         		    <tr>
+	    	   	    	         				<th>总计</th>
+	    	   	    	         				<th>30</th>
+	    	   	    	         				<th colspan="4">0:00</th>
+	    	   	    	         				<th colspan="4">1:00</th>
+	    	   	    	         				<th colspan="4">2:00</th>
+	    	   	    	         				<th colspan="4">3:00</th>
+	    	   	    	         				<th colspan="4">4:00</th>
+	    	   	    	         				<th colspan="4">5:00</th>
+	    	   	    	         				<th colspan="4">6:00</th>
+	    	   	    	         			    <th colspan="4">7:00</th>
+	    	   	    	         				<th colspan="4">8:00</th>
+	    	   	    	         				<th colspan="4">9:00</th>
+	    	   	    	         				<th colspan="4">10:00</th>
+	    	   	    	         				<th colspan="4">11:00</th>
+	    	   	    	         				<th colspan="4">12:00</th>
+	    	   	    	         				<th colspan="4">13:00</th>
+	    	   	    	         			    <th colspan="4">14:00</th>
+	    	   	    	         				<th colspan="4">15:00</th>
+	    	   	    	         				<th colspan="4">16:00</th>
+	    	   	    	         				<th colspan="4">17:00</th>
+	    	   	    	         				<th colspan="4">18:00</th>
+	    	   	    	         				<th colspan="4">19:00</th>
+	    	   	    	         				<th colspan="4">20:00</th>
+	    	   	    	         			    <th colspan="4">21:00</th>
+	    	   	    	         				<th colspan="4">22:00</th>
+	    	   	    	         				<th colspan="4">23:00</th>
+	    	   	    	         				
+	    	   	    	         			</tr>
+	    	   	    	         		</tbody>
+	    	   	    	         	</table>
+	    	   	    	         </div>
+			                     <div class="row">
+			                     	 <div class="chart" id="lineChart" style="height: 400px;"></div>
+			                     </div>
+    		            	 </div>
+    		            	 <div id="item3" class="tab-content" style="padding-top: 10px;width: 100%;">
+    		            	 	 <div class="chart" id="districtChart" style="height: 400px;"></div>
+    		            	 	 <div class="chart" id="sellertimeChart" style="height: 400px;"></div>
+    		            	 </div>
+    		            </div>
+	    	   	    </div>
+	    	   	    
+	    	   </div>
+	    	</div>
+	    	
+	       
+	    </div>	
+      <!--  end -->
+	  </div>
+	  
+	  <footer class="row">
+	  	 <div class="row footer-center">
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol class="">
+	  	        	<li><a href="../storeanalyze/store-anlyze.html">基础指标分析</a></li>
+	  	        	<li><a href="#">宝贝数量下标</a></li>
+	  	        	<li><a href="#">宝贝下架时间分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>宝贝分析</h4>
+	  	 		<ol>
+	  	            <li><a href="#">宝贝基础指标分析</a></li>
+	  	        	<li><a href="#">宝贝评价分析</a></li>
+	  	        	<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="../keywordanalyze/drop-down-word.html">下拉框取词</a></li>
+	  	       		<li><a href="../keywordanalyze/keyword-anlyze.html">标题分词工具</a></li>
+	   				<li><a href="../keywordanalyze/keyword-combine-anlyze.html">关键词组合工具</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>排名分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="#">淘宝排名分析</a></li>
+	  	  			<li><a href="#">天猫排名分析</a></li>
+      				<li><a href="app-anlyze.html">手机淘宝APP排名查询</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 </div>
+	  </footer>
+	</div>
+	</body>
+	<script src="../../js/getHover.js"></script>
+
+    <script src="../../js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../js/jquery.dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.min.js"></script>
+    
+	<script>
+		$(function(){
+			
+			  var obg,ocolor;
+			  $(".nav-ol>li").hover(function(){
+			  	  if($(this).children("a[href$='.html']").length>0){
+			  	  	 obg=$(this).css("background");
+                     ocolor=$(this).children("a").css("color");
+			  	     $(this).children("a").css({"color":"#fff"});
+			  	     $(this).css({"background":"#1fa87a"});
+			  	  }
+			  	 
+			  },function(){
+			  	if($(this).children("a[href$='.html']").length>0){
+			  	   $(this).css({"background":obg});
+			  	   $(this).children("a").css({"color":"#000"});
+			  	}
+			  });
+              
+              $(".nav-ul").navSlideDown();//nav的slidedown下拉
+              
+              /*tab*/
+			
+			/* $("#controlTab").tab({
+			       tabItem:".tab-item",
+			       tabContent:".tab-content"
+		     });*/
+		     $("#timeChart").css({"width":$("#timeChart").closest("div").outerWidth()+'px'});
+		     $("#districtChart,#sellertimeChart").css({"width":$("#districtChart").closest("div").outerWidth()+'px'});
+		     var tabItem=".tab-item";
+			 var tabContent=".tab-content";
+		     $(tabContent).hide();
+		     $(tabItem).each(function(){
+			     if($(this).hasClass("tab-item-active")){
+				    var $itemHref=$(this).attr("href");
+				    $($itemHref).show();
+				    return;
+			     }
+		     });
+		     $(tabItem).on("click",function(e){
+			    e.preventDefault();
+			    if($(this).hasClass("tab-item-active")){
+				    return;
+			    }
+			    else{
+				   $(tabItem).removeClass("tab-item-active");
+			       $(this).addClass("tab-item-active");
+			       $(tabContent).hide();
+			       $($(this).attr("href")).show();
+			   }
+			
+		    });
+			
+              
+              $("#example1").DataTable();
+              $('#example2,#example3').DataTable({
+                 "paging": true,
+                 "lengthChange": false,
+                 "searching": false,
+                 "ordering": true,
+                 "info": true,
+                 "autoWidth": false
+              });
+              
+              /**/
+             $("td").each(function(){
+             	if($(this).children(".show-img").length>0){
+             		var $obj=$(this).children(".show-img");
+             		var oheight=$(this).outerWidth()-8;
+             		$(this).hover(function(){
+             			$obj.append("<div class='big-img'><img src='"+$obj.children(".main-img").attr("src")+"' /></div>").end().find(".big-img").css({"left":oheight+'px'});
+             			
+             		},function(){
+             			$(this).find(".big-img").remove();
+             		})
+             	}
+             })
+             
+             
+            window.onresize=window.onload=function(){
+        	   
+        	   
+			var option = {
+    title : {
+        text : '店铺参谋[dianmoucanmou.com]iphone关键词',
+        subtext : '下架时间分布'
+    },
+    grid: {
+						x: 55,
+						x2:60,
+						y: 65
+						
+				},
+    tooltip : {
+        trigger: 'axis',
+        axisPointer:{
+            show: true,
+            type : 'cross',
+            lineStyle: {
+                type : 'dashed',
+                width : 1
+            }
+        }
+    },
+   
+   /* dataZoom: {
+        show: true,
+        start : 30,
+        end : 70
+    },*/
+    legend : {
+        data : [ 'series2']
+    },
+    xAxis : [
+        {
+            type : 'category',
+            axisLabel: { 
+                formatter : function(v) {
+                    return  v+':00'
+                }
+            },
+            /*data : function (){
+                var list = [];
+                var len = 0;
+                while (len++ < 23) {
+                    list.push(len);
+                }
+                return list;
+            }()*/
+            data : ['1','2','3','4','5','6','7','8',
+            '9','10','11','12','13','14','15','16',
+            '17','18','19','20','21','22','23','24']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            yxisLabel: { 
+                formatter : function(v) {
+                    return  '周'+v
+                }
+            },
+            data : ['一','二','三','四','五','六','日']
+        }
+    ],
+    animation: false,
+    series : [
+    
+        {
+            name:'series2',
+            type:'scatter',
+            tooltip : {
+                trigger: 'item',
+                formatter : function (params) {
+                    return params.seriesName + ' （'  + params.value[0] + '：00）<br/>'
+                           +'周'+ params.value[1] + '<br/> ' 
+                           + '人数'+params.value[2]; 
+                },
+                axisPointer:{
+                    show: true
+                }
+            },
+            symbolSize: function (value){
+                return Math.round(value[2]/10);
+            },
+            data : [['1','一','64'],['2','二','23'],['3','二','4'],['4','三','33'],['5','四','64'],['6','一','73'],
+            ['6','一','84'],['7','四','23'],['8','13','24'],['9','二','93'],['10','一','64'],['11','三','3'],
+            ['12','四','44'],['13','二','13'],['14','一','34'],['15','日','38'],['16','日','9'],['17','六','99'],
+            ['18','三','53'],['19','一','43'],['20','六','23'],['21','二','37'],['22','三','44'],['23','一','63']]
+            /*data: (function () {
+                var d = [];
+                var len = 0;
+                var value;
+                while (len++ < 23) {
+                    d.push([
+                        len,
+                        (Math.random()*30).toFixed(2) - 0,
+                        (Math.random()*100).toFixed(2) - 0
+                    ]);
+                }
+                return d;
+            })()*/
+        }
+    ]
+};
+        var opt1= {
+    title : {
+        text: '店铺参谋[dianmoucanmou.com]iphone关键词',
+        subtext: '宝贝创建时间分布'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['销售量','涨幅']
+    },
+   
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'销售量',
+            type:'bar',
+            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'涨幅',
+            type:'bar',
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+            markPoint : {
+                data : [
+                    {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+                    {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+};
+
+         var opt2= {
+    title : {
+        text: '店铺参谋[dianmoucanmou.com]iphone关键词',
+        subtext: '卖家发货地区分布'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['销售量']
+    },
+   
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'销售量',
+            type:'bar',
+            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        }]
+};
+          var opt3= {
+    title : {
+        text: '店铺参谋[dianmoucanmou.com]iphone关键词',
+        subtext: '店铺创建时间分布'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['销售量','涨幅']
+    },
+   
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'销售量',
+            type:'bar',
+            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'涨幅',
+            type:'bar',
+            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+            markPoint : {
+                data : [
+                    {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+                    {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+};
+                    
+             
+             
+            var byId = function(id) {
+				return document.getElementById(id);
+			  };
+			var barChart = echarts.init(byId('timeChart'));
+			barChart.setOption(option);
+			
+			var lineChart = echarts.init(byId('lineChart'));
+			lineChart.setOption(opt1);
+			
+			var sellertimeChart = echarts.init(byId('sellertimeChart'));
+			sellertimeChart.setOption(opt3);
+			
+			var districtChart = echarts.init(byId('districtChart'));
+			districtChart.setOption(opt2);
+			 
+            }
+              
+    });
+    
+    
+    
+</script>
+	
+</html>
+

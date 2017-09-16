@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>标题分词工具</title>
+		<meta name="description" content="">
+        <meta name="keyword" content="">
+       
+		<link href="../../css/reset.css" rel="stylesheet">
+	
+        <link href="../../css/style.css" rel="stylesheet">
+    
+	    <script src="../../js/jQuery-2.1.4.min.js"></script>
+	    <script type="text/javascript" src="../../js/echarts-all.js"></script>
+		
+		<!--[if lt IE 9]>
+        <script src="../ie8/html5shiv.min.js"></script>
+        <![endif]-->
+	</head>
+	<body>
+	
+	  <div id="">
+	  	<!-- topbar start-->
+	  	<div class="topbar">	
+	  	</div>
+	  	<!-- topbar end-->
+	  	
+	  	<!-- nav start-->
+	  	<div class="nav cl">
+	  		<hgroup>
+	  		    <img src="../../img/logo.png" alt="" class="logo" />
+	  		    <div class="topbar-range cl pull-right">
+	  			    <a href="#" id="" class="">登录</a><a href="#" class="bg-red">注册</a>
+	  			    <div>
+	  				 <!--<input type="text" value="搜索你想了解的" maxlength="20" class="topbar_search_ipt" />
+	  				  <img src="img/search_normal.png" class="cursor" />--> 
+	  		        </div>
+	  		    </div>
+	  		    
+	  		    
+	  	        <nav>	
+	  	    	   <ul class="nav-ul cl text-center">
+	  	        		<!--<li><a href="index.html">首页</a></li>-->
+	  	        		<li><a href="#">店铺分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="pages/cashierSystem.html">基础指标分析</a></li>
+	  	        				<li><a href="pages/clientRelation.html">宝贝数量下标</a></li>
+	  	        				<li><a href="#">宝贝下架时间分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">宝贝分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="pages/cashierSystem.html">宝贝基础指标分析</a></li>
+	  	        				<li><a href="pages/clientRelation.html">宝贝评价分析</a></li>
+	  	        				<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">关键词分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="pages/cashierSystem.html">下拉框取词</a></li>
+	  	        				<li><a href="pages/clientRelation.html">标题分词工具</a></li>
+	  	        				<li><a href="#">关键词组合工具</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">排名分析</a>
+	  	        			<ol class="nav-ol">
+	  	        				<li><a href="pages/cashierSystem.html">淘宝搜索排名分析</a></li>
+	  	        				<li><a href="pages/clientRelation.html">天猫搜索排名分析</a></li>
+	  	        				<li><a href="#">手机淘宝APP搜索排名</a></li>
+	  	        			</ol>
+	  	        		</li>
+	  	        		<li><a href="#">支持</a></li>
+	  	        	</ul>
+	  	        </nav>
+	  	        
+	        </hgroup>
+	        
+	  	</div>
+	  	<!-- nav end-->
+	  	
+	    
+	    <!--  start -->
+	    <div class="sub-content">
+	    	<div class="data-table">
+	    	   <h3 class="font-16"><a href="#" class="text-red">店铺参谋[dianpucanmou.com]</a><em>>></em><span>标题分词工具</span></h3>
+	    	   <div class="data-head cl">
+	    	   	    <div class="col-1"></div>
+	    	   	    <div class="col-1">
+	    	   	    	<label class="font-16 label pull-left">输入内容：</label>
+	    	   	    </div>
+	    	   	    
+	    	   	    <div class="col-3 keyword-text">
+	    	   	    	<textarea></textarea>
+	    	   	    </div>
+	    	   	    <div class="col-1">
+	    	   	    	<label class="font-16 label pull-left">去重后内容：</label>
+	    	   	    </div>
+	    	   	    <div class="col-3  keyword-text">
+	    	   	    	<textarea></textarea>
+	    	   	    </div>
+	    	   	    <div class="col-1">
+	    	   	        <input type="button" value="关键词去重" class="btn pull-left text-center" style="margin:0 10px 20px;padding-left: 0;padding-right: 0;" /><br />
+	    	   	        <input type="button" value="下载到客户端" class="btn pull-left text-center btn-defalut" style="margin:0 10px;padding-left: 0;padding-right: 0;" />
+	    	   	    </div>
+	    	   	    
+	    	   </div>
+	    	  
+	    	</div>
+	    	
+	       
+	    </div>	
+      <!--  end -->
+	  </div>
+	  
+	  <footer class="row">
+	  	 <div class="row footer-center">
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol class="">
+	  	        	<li><a href="#">基础指标分析</a></li>
+	  	        	<li><a href="#">宝贝数量下标</a></li>
+	  	        	<li><a href="#">宝贝下架时间分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>宝贝分析</h4>
+	  	 		<ol>
+	  	            <li><a href="pages/cashierSystem.html">宝贝基础指标分析</a></li>
+	  	        	<li><a href="pages/clientRelation.html">宝贝评价分析</a></li>
+	  	        	<li><a href="#">宝贝销售BKU分析</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>店铺分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">下拉框取词</a></li>
+	  	       		<li><a href="pages/clientRelation.html">标题分词工具</a></li>
+	   				<li><a href="#">关键词组合工具</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 	<div class="col-3">
+	  	 		<h4>排名分析</h4>
+	  	 		<ol>
+	  	        	<li><a href="pages/cashierSystem.html">淘宝排名分析</a></li>
+	  	  			<li><a href="pages/clientRelation.html">天猫排名分析</a></li>
+      				<li><a href="#">手机淘宝APP排名查询</a></li>
+	  	        </ol>
+	  	 	</div>
+	  	 </div>
+	  </footer>
+	</div>
+	</body>
+	<script src="../../js/getHover.js"></script>
+
+	<script>
+		$(function(){
+			
+			  var obg,ocolor;
+			  $(".nav-ol>li").hover(function(){
+			  	  if($(this).children("a[href$='.html']").length>0){
+			  	  	 obg=$(this).css("background");
+                     ocolor=$(this).children("a").css("color");
+			  	     $(this).children("a").css({"color":"#fff"});
+			  	     $(this).css({"background":"#1fa87a"});
+			  	  }
+			  	 
+			  },function(){
+			  	if($(this).children("a[href$='.html']").length>0){
+			  	   $(this).css({"background":obg});
+			  	   $(this).children("a").css({"color":"#000"});
+			  	}
+			  });
+              
+              $(".nav-ul").navSlideDown();//nav的slidedown下拉
+              
+             
+             
+             
+           
+    });
+    
+    
+    
+</script>
+	
+</html>
+

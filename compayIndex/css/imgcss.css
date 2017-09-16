@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+#mrq{padding:2px; margin:90px auto 0;}
+#mrq>h1{ padding-bottom: 10px; font-size: 18px; text-align: center; border-bottom: rgb(30,163,127) solid 4px; width:90px; letter-spacing: 2px; margin-bottom:40px;}
+#mrq,#Marquee_x{width:1020px;}
+#Marquee_x { overflow:hidden;} 
+#Marquee_x ul li ,#Marquee_x ul li div{ float:left;line-height:25px;overflow:hidden} 
+#Marquee_x ul li div{ float:left;line-height:25px; width:202px; overflow:hidden;}
+#Marquee_x ul li div,#Marquee_x ul li div img{height:130px;}
+#Marquee_x ul li div img{ border:1px solid #DADADA; width:200px; display:block;}
+#Marquee_x ul li div span{ display:block;}
+
+
+
